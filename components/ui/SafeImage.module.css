@@ -1,0 +1,60 @@
+.wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--color-primary-light);
+}
+
+.skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    var(--color-border) 20%,
+    #f4f2ec 40%,
+    var(--color-border) 60%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--color-primary-light);
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 12px;
+}
+
+.fallbackIcon {
+  font-size: 1.7rem;
+}
+
+.fallbackText {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}

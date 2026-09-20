@@ -1,0 +1,31 @@
+.infoBox {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  height: fit-content;
+}
+
+.infoBox h3 {
+  color: var(--color-primary-dark);
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+}
+
+.infoBox dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 12px;
+  font-size: 0.92rem;
+}
+
+.infoBox dt {
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.infoBox dd {
+  color: var(--color-text);
+  text-align: right;
+}
